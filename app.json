@@ -1,18 +1,18 @@
 {
-  "name": "Asena UserBot",
-  "description": "Asena UserBot",
+  "name": "DarkLegion UserBot",
+  "description": "DarkLegion UserBot",
   "logo": "https://i.hizliresim.com/1UoYoT.jpg",
   "keywords": [
     "telegram",
     "userbot",
-	  "Asena",
+	  "DarkLegion",
     "plugin",
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/yusufusta/AsenaUserbot",
-  "website":   "https://yusufusta.net/",
-  "success_url": "https://t.me/AsenaSupport",
+  "repository": "https://github.com/feridoffical/Darklegionbot",
+  "website":   "https://feridoffical.net/",
+  "success_url": "https://t.me/Darklegionsupport",
   "stack": "container",
   "env": {
     "API_KEY": {
