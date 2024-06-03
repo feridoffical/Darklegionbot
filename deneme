@@ -1,0 +1,28 @@
+from telegram.ext import Updater, CommandHandler
+import os
+
+# Telegram Bot Token'ınızı buraya ekleyin
+TOKEN = '7095246443:AAELmn85JNdh8RbMGaCqa5jNHLa3k5jp7tA'
+
+# /play komutunu işleyecek olan fonksiyon
+def play(update, context):
+    # Kullanıcı tarafından gönderilen mesajı alın
+    message = update.message
+    # Kullanıcı tarafından gönderilen mesajın metnini alın
+    text = message.text
+    # /play komutundan sonra gelen metni alın
+    song_name = text.split(' ', 1)[1]
+    # Örneğin, burada bir sesli sohbet hizmeti ile etkileşime geçebilir ve istenilen şarkıyı çalabilirsiniz
+    # Bu örnekte, sadece istenilen şarkıyı yazdıracağız
+    print(f"Playing song: {song_name}")
+
+# Telegram botunun updater'ını oluşturun
+updater = Updater(TOKEN, use_context=True)
+
+# /play komutunu işleyecek olan handler'ı oluşturun
+play_handler = CommandHandler('play', play)
+updater.dispatcher.add_handler(play_handler)
+
+# Botu çalıştırın
+updater.start_polling()
+updater.idle()
